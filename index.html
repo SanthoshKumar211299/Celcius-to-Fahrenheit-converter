@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Fahrenheit Coverter</title>
+</head>
+<body>
+    <div id="wrapper">
+        <h2>Celsius to FH</h2>
+        <div class="inputdiv">
+            <input type="text" id="input" placeholder="Enter the Celsius Value">
+        </div>
+        <div>
+            <button type="submit" onclick="convert()">Covert</button>
+        </div>
+         <div id="result">
+
+         </div>
+        <script>
+            function convert(){
+                const celcValue=Number(document.getElementById("input").value)
+                const FahrenhValue=(celcValue*1.8+32)
+                const result=document.getElementById("result")
+                result.innerHTML=FahrenhValue.toFixed(2)
+            }
+        </script>
+    </div>
+</body>
+</html>
